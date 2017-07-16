@@ -110,6 +110,32 @@ int main()
 				printf("0%x ", *(packet + i) & 0xff);
 			}
 		}
+		printf ("\n\n");
+		printf ("IP_src : ");
+		for (int i = 26; (25 < i && i < 30); i++)
+		{
+			if ((*(packet + i) & 0xff) >= 0x10)
+			{
+				printf("%d ", *(packet + i) & 0xff);
+			}
+			else
+			{
+				printf("%d ", *(packet + i) & 0xff);
+			}
+		}
+		printf ("\n");
+		printf ("IP_des : ");
+		for (int i = 30; (29 < i && i < 34); i++)
+		{
+			if ((*(packet + i) & 0xff) >= 0x10)
+			{
+				printf("%d ", *(packet + i) & 0xff);
+			}
+			else
+			{
+				printf("%d ", *(packet + i) & 0xff);
+			}
+		}
 		/*Close */
 		printf("\n");
 		pcap_close(handle);
