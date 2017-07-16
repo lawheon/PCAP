@@ -70,6 +70,19 @@ int main()
 				printf(" ");
 			}
 		}
+		printf ("\n\n");
+		printf ("Destination : ");
+		for (int i = 0; i < 6; i++)
+		{
+			if ((*(packet + i) & 0xff) >= 0x10)
+			{
+				printf("%x ", *(packet + i) & 0xff);
+			}
+			else
+			{
+				printf("0%x ", *(packet + i) & 0xff);
+			}
+		}
 		/*Close */
 		printf("\n");
 		pcap_close(handle);
