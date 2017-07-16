@@ -86,7 +86,7 @@ int main()
 		}
 		printf ("\n");
 		printf ("Source : ");
-		for (int i = 0; (7 < i && i < 12); i++)
+		for (int i = 6; (5 < i && i < 12); i++)
 		{
 			if ((*(packet + i) & 0xff) >= 0x10)
 			{
