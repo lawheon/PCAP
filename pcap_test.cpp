@@ -90,7 +90,20 @@ int main()
 		{
 			if ((*(packet + i) & 0xff) >= 0x10)
 			{
-				printf("%x ", *(packet +i) & 0xff);
+				printf("%x ", *(packet + i) & 0xff);
+			}
+			else
+			{
+				printf("0%x ", *(packet + i) & 0xff);
+			}
+		}
+		printf ("\n");
+		printf ("Type : ");
+		for (int i = 12; (11 < i && i < 14); i++)
+		{
+			if ((*(packet + i) & 0xff) >= 0x10)
+			{
+				printf("%x ", *(packet + i) & 0xff);
 			}
 			else
 			{
