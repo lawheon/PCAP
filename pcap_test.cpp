@@ -82,6 +82,20 @@ int main()
 			{
 				printf("0%x ", *(packet + i) & 0xff);
 			}
+		
+		}
+		printf ("\n");
+		printf ("Source : ");
+		for (int i = 0; (7 < i && i < 12); i++)
+		{
+			if ((*(packet + i) & 0xff) >= 0x10)
+			{
+				printf("%x ", *(packet +i) & 0xff);
+			}
+			else
+			{
+				printf("0%x ", *(packet + i) & 0xff);
+			}
 		}
 		/*Close */
 		printf("\n");
